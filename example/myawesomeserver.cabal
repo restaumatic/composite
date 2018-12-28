@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.0.
+-- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4a5ba3de0628ec1259bfde4fbec1261092702ae47ee05ae9d3f9659365335259
+-- hash: 7ff258123ea5ed535ef995556f5d2042fd06428b6cc0eb57762478aef7b7e2f1
 
 name:           myawesomeserver
 version:        0.0.1
@@ -24,10 +24,10 @@ library
   default-extensions: Arrows ConstraintKinds DataKinds DeriveGeneric FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall
   build-depends:
-      aeson >=1.1.2.0 && <1.4
+      aeson >=1.1.2.0 && <1.5
     , base >=4.7 && <5
     , bytestring >=0.10.8.1 && <0.11
-    , classy-prelude >=1.2.0.1 && <1.5
+    , classy-prelude >=1.2.0.1 && <1.6
     , composite-aeson >=0.5.3.0 && <0.6
     , composite-base >=0.5.3.0 && <0.6
     , composite-ekg >=0.5.3.0 && <0.6
@@ -38,22 +38,22 @@ library
     , ekg-core >=0.1.1.3 && <0.5
     , exceptions >=0.8.3 && <0.11
     , fast-logger >=2.4.10 && <2.5
-    , http-api-data >=0.3.7.1 && <0.4
+    , http-api-data >=0.3.7.1 && <0.5
     , insert-ordered-containers >=0.2.1.0 && <0.3
-    , lens >=4.15.4 && <4.17
+    , lens >=4.15.4 && <4.18
     , monad-control >=1.0.2.2 && <1.1
     , monad-logger >=0.3.25.1 && <0.4
     , mtl >=2.2.1 && <2.3
     , opaleye >=0.5.4.0 && <0.7
-    , postgresql-simple >=0.5.3.0 && <0.6
+    , postgresql-simple >=0.5.3.0 && <0.7
     , product-profunctors >=0.8.0.3 && <0.11
-    , profunctors >=5.2.1 && <5.3
+    , profunctors >=5.2.1 && <5.4
     , resource-pool >=0.2.3.2 && <0.3
-    , servant >=0.11 && <0.15
-    , servant-server >=0.11.0.1 && <0.15
+    , servant >=0.11 && <0.16
+    , servant-server >=0.11.0.1 && <0.16
     , servant-swagger >=1.1.4 && <1.2
     , servant-swagger-ui >=0.2.4.3.4.0 && <0.4
-    , swagger2 >=2.1.6 && <2.3
+    , swagger2 >=2.1.6 && <2.4
     , text >=1.2.2.2 && <1.3
     , vinyl >=0.5.3 && <0.9
     , warp >=3.2.13 && <3.3
@@ -76,10 +76,10 @@ executable myawesomeserver-exe
   default-extensions: Arrows ConstraintKinds DataKinds DeriveGeneric FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings PatternSynonyms QuasiQuotes RankNTypes ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators ViewPatterns
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      aeson >=1.1.2.0 && <1.4
+      aeson >=1.1.2.0 && <1.5
     , base >=4.7 && <5
     , bytestring >=0.10.8.1 && <0.11
-    , classy-prelude >=1.2.0.1 && <1.5
+    , classy-prelude >=1.2.0.1 && <1.6
     , composite-aeson >=0.5.3.0 && <0.6
     , composite-base >=0.5.3.0 && <0.6
     , composite-ekg >=0.5.3.0 && <0.6
@@ -90,23 +90,23 @@ executable myawesomeserver-exe
     , ekg-core >=0.1.1.3 && <0.5
     , exceptions >=0.8.3 && <0.11
     , fast-logger >=2.4.10 && <2.5
-    , http-api-data >=0.3.7.1 && <0.4
+    , http-api-data >=0.3.7.1 && <0.5
     , insert-ordered-containers >=0.2.1.0 && <0.3
-    , lens >=4.15.4 && <4.17
+    , lens >=4.15.4 && <4.18
     , monad-control >=1.0.2.2 && <1.1
     , monad-logger >=0.3.25.1 && <0.4
     , mtl >=2.2.1 && <2.3
     , myawesomeserver
     , opaleye >=0.5.4.0 && <0.7
-    , postgresql-simple >=0.5.3.0 && <0.6
+    , postgresql-simple >=0.5.3.0 && <0.7
     , product-profunctors >=0.8.0.3 && <0.11
-    , profunctors >=5.2.1 && <5.3
+    , profunctors >=5.2.1 && <5.4
     , resource-pool >=0.2.3.2 && <0.3
-    , servant >=0.11 && <0.15
-    , servant-server >=0.11.0.1 && <0.15
+    , servant >=0.11 && <0.16
+    , servant-server >=0.11.0.1 && <0.16
     , servant-swagger >=1.1.4 && <1.2
     , servant-swagger-ui >=0.2.4.3.4.0 && <0.4
-    , swagger2 >=2.1.6 && <2.3
+    , swagger2 >=2.1.6 && <2.4
     , text >=1.2.2.2 && <1.3
     , vinyl >=0.5.3 && <0.9
     , warp >=3.2.13 && <3.3

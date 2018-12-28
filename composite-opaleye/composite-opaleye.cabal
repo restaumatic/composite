@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.0.
+-- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a165e49742efd61caf8c673211c5e9f70c4b579833740ea594949012cfff973b
+-- hash: 517276c838470d5532a587311a3d91369f58cdb2b5f145a898eb0a57082ce090
 
 name:           composite-opaleye
 version:        0.5.5.0
@@ -27,12 +27,12 @@ library
       base >=4.7 && <5
     , bytestring >=0.10.8.1 && <0.11
     , composite-base >=0.5.3.0 && <0.6
-    , lens >=4.15.4 && <4.17
+    , lens >=4.15.4 && <4.18
     , opaleye >=0.5.4.0 && <0.7
-    , postgresql-simple >=0.5.3.0 && <0.6
+    , postgresql-simple >=0.5.3.0 && <0.7
     , product-profunctors >=0.8.0.3 && <0.11
-    , profunctors >=5.2.1 && <5.3
-    , template-haskell >=2.11.1.0 && <2.14
+    , profunctors >=5.2.1 && <5.4
+    , template-haskell >=2.11.1.0 && <2.15
     , text >=1.2.2.2 && <1.3
     , vinyl >=0.5.3 && <0.9
   exposed-modules:
@@ -60,12 +60,12 @@ test-suite composite-opaleye-test
     , composite-base >=0.5.3.0 && <0.6
     , composite-opaleye
     , hspec
-    , lens >=4.15.4 && <4.17
+    , lens >=4.15.4 && <4.18
     , opaleye >=0.5.4.0 && <0.7
-    , postgresql-simple >=0.5.3.0 && <0.6
+    , postgresql-simple >=0.5.3.0 && <0.7
     , product-profunctors >=0.8.0.3 && <0.11
-    , profunctors >=5.2.1 && <5.3
-    , template-haskell >=2.11.1.0 && <2.14
+    , profunctors >=5.2.1 && <5.4
+    , template-haskell >=2.11.1.0 && <2.15
     , text >=1.2.2.2 && <1.3
     , vinyl >=0.5.3 && <0.9
   other-modules:
