@@ -22,7 +22,7 @@ import Language.Haskell.TH
   )
 import Language.Haskell.TH.Syntax (lift)
 import Opaleye
-  ( Column, Constant(..), QueryRunnerColumnDefault, ToFields, fieldQueryRunnerColumn, queryRunnerColumnDefault
+  ( Column, Constant(..), DefaultFromField, ToFields, fieldQueryRunnerColumn, defaultFromField
   )
 import Opaleye.Internal.PGTypes (IsSqlType, showSqlType, literalColumn)
 import Opaleye.Internal.HaskellDB.PrimQuery (Literal(StringLit))
@@ -73,8 +73,8 @@ import Opaleye.Internal.HaskellDB.PrimQuery (Literal(StringLit))
 --           Just other -> 'returnError' 'ConversionFailed' f ("Unexpected myschema.myenum value: " <> 'BSC8.unpack' other)
 --           Nothing    -> 'returnError' 'UnexpectedNull' f ""
 --
---     instance 'QueryRunnerColumnDefault' PGMyEnum MyEnum where
---       queryRunnerColumnDefault = 'fieldQueryRunnerColumn'
+--     instance 'DefaultFromField' PGMyEnum MyEnum where
+--       defaultFromField = 'fieldQueryRunnerColumn'
 --
 --     instance 'Default' 'ToFields' MyEnum ('Column' PGMyEnum) where
 --       def = 'Constant' $ \ a ->
@@ -165,8 +165,8 @@ deriveOpaleyeEnum hsName sqlName hsConToSqlValue = do
           []
       ]
 
-  queryRunnerColumnDefaultInst <- instanceD (cxt []) [t| QueryRunnerColumnDefault $sqlType $hsType |] . (:[]) $
-    funD 'queryRunnerColumnDefault
+  defaultFromFieldInst <- instanceD (cxt []) [t| DefaultFromField $sqlType $hsType |] . (:[]) $
+    funD 'defaultFromField
       [ clause
           []
           (normalB [| fieldQueryRunnerColumn |])
@@ -190,5 +190,5 @@ deriveOpaleyeEnum hsName sqlName hsConToSqlValue = do
           []
       ]
 
-  pure [sqlTypeDecl, isSqlTypeInst, fromFieldInst, queryRunnerColumnDefaultInst, defaultInst]
+  pure [sqlTypeDecl, isSqlTypeInst, fromFieldInst, defaultFromFieldInst, defaultInst]
 
